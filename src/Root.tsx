@@ -1,7 +1,5 @@
+import React from "react";
 import { Composition, Folder } from "remotion";
-import { TikTokGymBeast, TOTAL_TIKTOK_FRAMES } from "./tiktok/TikTokGymBeast";
-import { IntroHook } from "./tiktok/IntroHook";
-import { OutroCTA } from "./tiktok/OutroCTA";
 import {
   TikTokGymFloating,
   TOTAL_FLOATING_FRAMES,
@@ -32,7 +30,7 @@ const Floating3DPreview: React.FC = () => (
 export const RemotionRoot: React.FC = () => {
   return (
     <>
-      {/* 🌟 New Reference Aesthetic: Floating Chrome & Neon Guide Rails (@erabii style) */}
+      {/* 🌟 3D Floating Chrome & Neon Biomechanics HUD (@erabii viral style) */}
       <Composition
         id="TikTok-Gym-Floating"
         component={TikTokGymFloating}
@@ -42,6 +40,7 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
       />
 
+      {/* 💎 4K Master Ultra-Quality (2160x3840 Native Resolution) */}
       <Composition
         id="TikTok-Gym-Floating-4K"
         component={TikTokGymFloating}
@@ -51,48 +50,8 @@ export const RemotionRoot: React.FC = () => {
         height={3840}
       />
 
-      {/* 🚀 Original Feature: 1080p Ultra-Quality TikTok Edit (1080x1920, 61s) */}
-      <Composition
-        id="TikTok-Gym-Beast"
-        component={TikTokGymBeast}
-        durationInFrames={TOTAL_TIKTOK_FRAMES}
-        fps={30}
-        width={1080}
-        height={1920}
-      />
-
-      {/* 💎 4K Master Ultra-Quality (Native 2160x3840 iPhone 15 Pro Max Resolution) */}
-      <Composition
-        id="TikTok-Gym-Beast-4K"
-        component={TikTokGymBeast}
-        durationInFrames={TOTAL_TIKTOK_FRAMES}
-        fps={30}
-        width={2160}
-        height={3840}
-      />
-
-      {/* Individual Modular TikTok Components */}
-      <Folder name="TikTok-Components">
-        <Composition
-          id="TikTok-Intro-Hook"
-          component={IntroHook}
-          durationInFrames={60}
-          fps={30}
-          width={1080}
-          height={1920}
-        />
-        <Composition
-          id="TikTok-Outro-CTA"
-          component={OutroCTA}
-          durationInFrames={75}
-          fps={30}
-          width={1080}
-          height={1920}
-        />
-      </Folder>
-
-      {/* Floating Style Modular Components (@erabii aesthetic) */}
-      <Folder name="TikTok-Floating-Components">
+      {/* Floating Style Modular Components */}
+      <Folder name="Floating-Components">
         <Composition
           id="Floating-Intro-Hook"
           component={FloatingIntroHook}

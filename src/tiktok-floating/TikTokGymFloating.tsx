@@ -59,19 +59,19 @@ export const FLOATING_EXERCISES: FloatingWorkoutExerciseItem[] = [
     showTrajectory: false,
   },
   {
-    filename: "2026_10_06_18_31_18_IMG_7171.mp4",
-    trimStartSeconds: 24.0, // ✂️ Starts right at first explosive chest squeeze
-    durationInFrames: 195, // 6.5s
-    expectedReps: 4,
-    focalCenterXPercent: 49,
-    focalCenterYPercent: 44,
+    filename: "2026_10_18_chest_fly.mp4",
+    trimStartSeconds: 0.0, // ✂️ Starts right at explosive chest squeeze
+    durationInFrames: 105, // 3.5s
+    expectedReps: 1,
+    focalCenterXPercent: 50,
+    focalCenterYPercent: 46,
     lifterDrift: "stationary",
-    recommendedCameraScale: 1.10,
+    recommendedCameraScale: 1.0,
     exerciseNumber: "03",
     titleLines: ["MACHINE", "CHEST FLY"],
     muscleTag: "PECTORALIS MAJOR // INNER CHEST",
-    intensityTag: "3 SETS × 12-15 REPS • 2s SQUEEZE",
-    showTrajectory: true,
+    intensityTag: "PEAK CONTRACTION • 2s SQUEEZE",
+    showTrajectory: false,
   },
   {
     filename: "2026_10_06_18_52_38_IMG_7202.MP4",
@@ -105,17 +105,17 @@ export const FLOATING_EXERCISES: FloatingWorkoutExerciseItem[] = [
   },
   {
     filename: "2026_10_06_19_14_25_IMG_7213.MP4",
-    trimStartSeconds: 30.0, // ✂️ Starts right at heavy power rack shrug reps
-    durationInFrames: 195, // 6.5s
-    expectedReps: 5,
+    trimStartSeconds: 25.1, // ✂️ Calibrated: starts right at first shrug pull, zero dead time, zero fingers
+    durationInFrames: 130, // 4.33s (2 complete full reps)
+    expectedReps: 2,
     focalCenterXPercent: 38,
-    focalCenterYPercent: 56,
+    focalCenterYPercent: 54,
     lifterDrift: "stationary",
     recommendedCameraScale: 1.10,
     exerciseNumber: "06",
     titleLines: ["POWER RACK", "BARBELL SHRUG"],
     muscleTag: "TRAPEZIUS // UPPER BACK OVERLOAD",
-    intensityTag: "4 SETS × 12 REPS • HEAVY ELEVATION",
+    intensityTag: "2 HEAVY REPS • PEAK CONTRACTION",
     showTrajectory: false,
   },
   {
@@ -212,6 +212,9 @@ export const TikTokGymFloating: React.FC<{
           <Series.Sequence
             key={item.filename}
             durationInFrames={item.durationInFrames}
+            style={{
+              translate: "0px 36.3px"
+            }}
           >
             <FloatingExerciseClip
               filename={item.filename}

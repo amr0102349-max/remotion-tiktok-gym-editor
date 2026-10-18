@@ -68,66 +68,8 @@ export const FloatingWorkoutHUD: React.FC<FloatingWorkoutHUDProps> = ({
     extrapolateRight: "clamp",
   });
 
-  // ⚡ 2. Neon Vertical Trajectory Guide Rails (Dumbbell & Barbell Path Tracking)
-  const trajectoryGrowth = interpolate(frame, [12, 32], [0, 680], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
-
-  // Laser electrical oscillation
-  const laserPulse = Math.sin(frame * 0.28) * 0.16 + 0.84;
-  const trajectoryFadeOut = interpolate(frame, [75, 90], [1, 0], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
-
   return (
     <AbsoluteFill style={{ pointerEvents: "none" }}>
-      {/* ⚡ 1. NEON BIOMECHANICAL TRAJECTORY GUIDE RAILS (Frames 12 - 90) */}
-      {showTrajectory && trajectoryFadeOut > 0.01 && (
-        <AbsoluteFill
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-            opacity: trajectoryFadeOut,
-          }}
-        >
-          <div
-            style={{
-              position: "relative",
-              width: "520px",
-              height: "760px",
-              display: "flex",
-              justifyContent: "space-between",
-              top: "60px",
-            }}
-          >
-            {/* Left Laser Guide Rail */}
-            <div
-              style={{
-                width: "5px",
-                height: `${trajectoryGrowth}px`,
-                background:
-                  "linear-gradient(180deg, rgba(255,255,255,0) 0%, #FFFFFF 15%, #FFE259 45%, #FFA500 80%, rgba(255,165,0,0) 100%)",
-                boxShadow: `0 0 16px rgba(255, 226, 89, ${laserPulse}), 0 0 35px rgba(255, 165, 0, 0.7), 0 0 60px rgba(255, 140, 0, 0.35)`,
-                borderRadius: "999px",
-              }}
-            />
-
-            {/* Right Laser Guide Rail */}
-            <div
-              style={{
-                width: "5px",
-                height: `${trajectoryGrowth}px`,
-                background:
-                  "linear-gradient(180deg, rgba(255,255,255,0) 0%, #FFFFFF 15%, #FFE259 45%, #FFA500 80%, rgba(255,165,0,0) 100%)",
-                boxShadow: `0 0 16px rgba(255, 226, 89, ${laserPulse}), 0 0 35px rgba(255, 165, 0, 0.7), 0 0 60px rgba(255, 140, 0, 0.35)`,
-                borderRadius: "999px",
-              }}
-            />
-          </div>
-        </AbsoluteFill>
-      )}
 
       {/* 🌟 2. MAIN 3D FLOATING CHROME TITLE (@erabii viral aesthetic in upper safe zone) */}
       {mainTitleOpacity > 0.01 && (
