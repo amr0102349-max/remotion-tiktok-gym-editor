@@ -27,6 +27,12 @@ const Floating3DPreview: React.FC = () => (
   <Floating3DChromeText titleLines={["INCLINE", "DUMBBELL", "PRESS"]} />
 );
 
+const TikTokGymFloating4K: React.FC = () => (
+  <div style={{ transform: "scale(2)", transformOrigin: "top left", width: 1080, height: 1920 }}>
+    <TikTokGymFloating />
+  </div>
+);
+
 export const RemotionRoot: React.FC = () => {
   return (
     <>
@@ -43,7 +49,7 @@ export const RemotionRoot: React.FC = () => {
       {/* 💎 4K Master Ultra-Quality (2160x3840 Native Resolution) */}
       <Composition
         id="TikTok-Gym-Floating-4K"
-        component={TikTokGymFloating}
+        component={TikTokGymFloating4K}
         durationInFrames={TOTAL_FLOATING_FRAMES}
         fps={30}
         width={2160}
