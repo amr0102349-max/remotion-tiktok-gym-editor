@@ -18,11 +18,13 @@ out/
 *.mov
 *.MOV
 
-# Large Raw Video Media Files
+# Large Raw Video & Audio Media Files
 public/*.MOV
 public/*.mov
 public/*.MP4
 public/*.mp4
+public/*.mp3
+*.mp3
 
 # Extracted Frames, Screenshots & Images
 *.png
